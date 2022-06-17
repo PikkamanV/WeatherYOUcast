@@ -1,0 +1,80 @@
+{
+  "title": "東京都 東京 の天気",
+  "forecasts": [
+    {
+      "date": "2022-01-01",
+      "dateLabel": "今日",
+      "detail": {
+        "weather": "くもり",
+        "wind": "南西の風　やや強く",
+        "wave": "１．５メートル　後　１メートル"
+      },
+      "temperature": {
+        "min": {
+          "celsius": null,
+          "fahrenheit": null
+        },
+        "max": {
+          "celsius": null,
+          "fahrenheit": null
+        }
+      },
+      "chanceOfRain": {
+        "T00_06": "--%",
+        "T06_12": "--%",
+        "T12_18": "--%",
+        "T18_24": "--%"
+      }
+    },
+    {
+      "date": "2022-01-02",
+      "dateLabel": "明日",
+      "detail": {
+        "weather": "晴れ",
+        "wind": "南西の風　やや強く",
+        "wave": "１メートル"
+      },
+      "temperature": {
+        "min": {
+          "celsius": "0",
+          "fahrenheit": "0.0"
+        },
+        "max": {
+          "celsius": "0",
+          "fahrenheit": "0.0"
+        }
+      },
+      "chanceOfRain": {
+        "T00_06": "--%",
+        "T06_12": "--%",
+        "T12_18": "--%",
+        "T18_24": "--%"
+      }
+    },
+    {
+      "date": "2022-01-03",
+      "dateLabel": "明後日",
+      "detail": {
+        "weather": "くもり　時々　晴れ",
+        "wind": "南西の風　やや強く",
+        "wave": "０．５メートル　後　１メートル"
+      },
+      "temperature": {
+        "min": {
+          "celsius": "0",
+          "fahrenheit": "0.0"
+        },
+        "max": {
+          "celsius": "0",
+          "fahrenheit": "0.0"
+        }
+      },
+      "chanceOfRain": {
+        "T00_06": "30%",
+        "T06_12": "30%",
+        "T12_18": "30%",
+        "T18_24": "30%"
+      }
+    }
+  ]
+}
