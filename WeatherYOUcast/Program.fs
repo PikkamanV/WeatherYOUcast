@@ -43,19 +43,19 @@ let postAsync (client: HttpClient) (url: string) (postContent: string) =
     }
 
 
-let makeOneDay (data: JsonType.Forecast) =
-    let intToStringTemperature (t: int option) =
+let makeOneDay (forecast: JsonType.Forecast) =
+    let convertIntTemperatureToString (t: int option) =
         match t with
         | Some t -> t.ToString() + "℃"
         | None -> "---"
 
-    $"%s{data.DateLabel} (%s{data.Date.ToShortDateString()})\n\
-    %s{data.Detail.Weather}\n\
-    最高気温 %s{intToStringTemperature data.Temperature.Max.Celsius}\n\
-    最低気温 %s{intToStringTemperature data.Temperature.Min.Celsius}\n\
+    $"%s{forecast.DateLabel} (%s{forecast.Date.ToShortDateString()})\n\
+    %s{forecast.Detail.Weather}\n\
+    最高気温 %s{convertIntTemperatureToString forecast.Temperature.Max.Celsius}\n\
+    最低気温 %s{convertIntTemperatureToString forecast.Temperature.Min.Celsius}\n\
     降水確率\n\
     | 0- 6| 6-12|12-18|18-24|\n\
-    |  %s{data.ChanceOfRain.T0006.String.Value}|  %s{data.ChanceOfRain.T0612.String.Value}|  %s{data.ChanceOfRain.T1218.String.Value}|  %s{data.ChanceOfRain.T1824.String.Value}|\n\
+    |  %s{forecast.ChanceOfRain.T0006.String.Value}|  %s{forecast.ChanceOfRain.T0612.String.Value}|  %s{forecast.ChanceOfRain.T1218.String.Value}|  %s{forecast.ChanceOfRain.T1824.String.Value}|\n\
     ------------------------------"
 
 let makePostContent (fetchedForecasts: JsonType.Root) =
