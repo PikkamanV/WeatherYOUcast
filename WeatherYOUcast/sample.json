@@ -55,9 +55,9 @@
       "date": "2022-01-03",
       "dateLabel": "明後日",
       "detail": {
-        "weather": "くもり　時々　晴れ",
-        "wind": "南西の風　やや強く",
-        "wave": "０．５メートル　後　１メートル"
+        "weather": null,
+        "wind": null,
+        "wave": null
       },
       "temperature": {
         "min": {

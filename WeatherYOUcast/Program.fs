@@ -49,8 +49,13 @@ let makeOneDay (forecast: JsonType.Forecast) =
         | Some t -> t.ToString() + "℃"
         | None -> "---"
 
+    let formatWeatherString (weather: string option) =
+        match weather with
+        | Some weather -> weather
+        | None -> "---"
+    
     $"%s{forecast.DateLabel} (%s{forecast.Date.ToShortDateString()})\n\
-    %s{forecast.Detail.Weather}\n\
+    %s{formatWeatherString forecast.Detail.Weather}\n\
     最高気温 %s{convertIntTemperatureToString forecast.Temperature.Max.Celsius}\n\
     最低気温 %s{convertIntTemperatureToString forecast.Temperature.Min.Celsius}\n\
     降水確率\n\
